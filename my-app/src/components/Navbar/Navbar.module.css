@@ -1,0 +1,23 @@
+.nav {
+    grid-area: n;
+    background-color: cornflowerblue;
+}
+
+.item{
+    color: white;
+    text-decoration: none;
+    margin-left: 2vw;
+    margin-top: 1vh;
+}
+
+/*.item:hover{*/
+/*    color: darkgreen;*/
+/*}*/
+
+.item:active{
+    color: red;
+}
+
+.item.active{
+     color: gold;
+ }
