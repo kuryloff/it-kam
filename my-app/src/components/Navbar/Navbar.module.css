@@ -1,23 +1,37 @@
 .nav {
     grid-area: n;
-    background-color: cornflowerblue;
+    background-color: #517b9e;
+   /*padding: 20px;*/
+
 }
 
-.item{
-    color: white;
+.item {
+    margin: 20px;
+    color: #c0daf0;
     text-decoration: none;
-    margin-left: 2vw;
-    margin-top: 1vh;
+
 }
 
 /*.item:hover{*/
 /*    color: darkgreen;*/
 /*}*/
 
-.item:active{
-    color: red;
+/*.item:active{*/
+/*    color: red;*/
+/*}*/
+
+.activeLink {
+    color: white;
+
 }
 
-.item.active{
-     color: gold;
- }
+nav div{
+    height: 5vh;
+    display: flex;
+    align-items: center;
+
+}
+nav div:hover{
+    background-color: #466782;
+}
+
