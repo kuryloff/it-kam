@@ -1,0 +1,14 @@
+.logo {
+    height: 60px;
+    width: 60px;
+}
+
+.wallpaper {
+    position: center;
+    width: 100%;
+    height: 40vh;
+}
+
+.descriptionBlock{
+    padding: 10px;
+}
