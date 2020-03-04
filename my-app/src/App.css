@@ -3,14 +3,23 @@
     background-color: #d9dcde;
 
     display: grid;
-    grid-template-areas: "h h" "n c";
+    grid-template-areas: "h h" "n  c";
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     grid-template-rows: 80px 1fr;
     grid-template-columns: 2fr 10fr;
+
+
+    /*display: grid;*/
+    /*grid-template-columns: repeat(4, 1fr);*/
+    /*grid-template-rows: 1fr repeat(4, 2fr);*/
+    /*grid-column-gap: 10px;*/
+    /*grid-row-gap: 10px;*/
 }
 
 .wrapper-content {
     background-color: #f0f4f7;
     grid-area: c;
+
+    /*grid-area: 2 / 2 / 6 / 6;*/
 }

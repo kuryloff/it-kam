@@ -1,7 +1,10 @@
 .header {
     grid-area: h;
+
+    /*grid-area: 1 / 1 / 2 / 6;*/
     background-color: #4c85b5;
     /*position: fixed;*/
+    /*z-index: 1000;*/
     /*width: 100vw;*/
 
 }

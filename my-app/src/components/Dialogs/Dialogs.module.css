@@ -5,21 +5,41 @@
 }
 
 .dialog {
+    display: flex;
+    flex-direction: column;
+    min-height: 90px;
+    align-items: center;
+    padding-bottom: 10px;
+}
 
+.dialog img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.dialog a {
+    text-decoration: none;
 }
 
 .dialogsItems {
     padding: 10px;
 }
 
-
 .dialogsItems .active {
     color: black;
 }
+
 .messages {
     padding: 10px;
 }
 
 .message {
-
+    color: black;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
 }
+
+/*.activeLink {*/
+/*    color: red;*/
+/*}*/

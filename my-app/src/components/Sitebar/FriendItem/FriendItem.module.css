@@ -1,0 +1,16 @@
+.friendBlock{
+    background-color: #517b9e;
+display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.friendBlock img{
+    height: 30px;
+    border-radius: 50%;
+}
+
+.nickname{
+    color: #f0f4f7;
+    padding-top: 5px;
+}
