@@ -15,15 +15,17 @@ const App = (props) => {
         <BrowserRouter>
             <div className='wrapper'>
                 <Header/>
-
                 <Navbar data={props.state.sidebar}/>
-
-                <div className='wrapper-content'>
-
+                <div className='content'>
                     <Route path={'/dialogs'}
-                           render={() => <Dialogs data={props.state.dialogsPage}/>}/>
+                           render={() => <Dialogs data={props.state.dialogsPage}
+                           addMessage={props.addMesssage}
+                           updateNewMessageText={props.updateNewMessageText}/>}/>
                     <Route path={'/profile'}
-                           render={() => <Profile data={props.state.profilePage}/>}/>
+                           render={() => <Profile
+                               profilePage={props.state.profilePage}
+                               addPost={props.addPost}
+                               updateNewPostText={props.updateNewPostText}/>}/>
                     <Route path={'/news'} render={() => <News/>}/>
                     <Route path={'/music'} render={() => <Music/>}/>
                     <Route path={'/settings'} render={() => <Settings/>}/>

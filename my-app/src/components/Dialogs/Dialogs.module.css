@@ -9,7 +9,7 @@
     flex-direction: column;
     min-height: 90px;
     align-items: center;
-    padding-bottom: 10px;
+    /*padding-bottom: 10px;*/
 }
 
 .dialog img {
@@ -22,7 +22,7 @@
 }
 
 .dialogsItems {
-    padding: 10px;
+    /*padding: 10px;*/
 }
 
 .dialogsItems .active {
@@ -35,7 +35,7 @@
 
 .message {
     color: black;
-    min-height: 90px;
+    min-height: 30px;
     display: flex;
     align-items: center;
 }
