@@ -6,8 +6,7 @@ import Message from "./Message/Message";
 import {
     sendMessageCreator,
     updateNewMessageTextCreator,
-    updateNewPostTextCreator
-} from "../../redux/state";
+} from "../../redux/dialogs-reducer";
 
 const Dialogs = (props) => {
 
@@ -20,7 +19,7 @@ const Dialogs = (props) => {
     };
     let onMessageChange = () =>{
         let text = messageText.current.value;
-        // props.updateNewMessageText(text);
+
         let action = updateNewMessageTextCreator(text);
         props.dispatch(action);
     };

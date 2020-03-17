@@ -2,12 +2,6 @@ import profileReducer from "./profile-reducer";
 import dialogsReducer from "./dialogs-reducer";
 import sidebarReducer from "./sidebar-reducer";
 
-const ADD_POST = 'ADD-POST';
-const ADD_MESSAGE = 'ADD-MESSAGE';
-
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
-const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT';
-
 let store = {
     _state: {
         profilePage: {
@@ -106,35 +100,6 @@ let store = {
     _callSubscriber() {
         console.log('State changed')
     },
-    _addPost() {
-        let newPost = {
-            id: 4,
-            post: this._state.profilePage.newPostText,
-            like: 0,
-        };
-        this._state.profilePage.posts.push(newPost);
-        this._state.profilePage.newPostText = '';
-        this._callSubscriber(this._state);
-    },
-    _updateNewPostText(newText) {
-        this._state.profilePage.newPostText = newText;
-        this._callSubscriber(this._state);
-    },
-    _updateNewMessageText(newText) {
-        this._state.dialogsPage.newMessageText = newText;
-        this._callSubscriber(this._state);
-    },
-
-    sendMessage() {
-        let newMessage = {
-            id: 8,
-            message: this._state.dialogsPage.newMessageText,
-        };
-        this._state.dialogsPage.messages.push(newMessage);
-        this._state.dialogsPage.newMessageText = '';
-        this._callSubscriber(this._state);
-    },
-
     dispatch(action) {
         this._state.profilePage = profileReducer(this._state.profilePage, action);
         this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action);
@@ -142,13 +107,6 @@ let store = {
         this._callSubscriber(this._state);
     },
 };
-
-export const addPostActionCreator = () => ({type: ADD_POST});
-export const updateNewPostTextCreator = (text) =>
-    ({type: UPDATE_NEW_POST_TEXT, newText: text});
-export const sendMessageCreator = () => ({type: ADD_MESSAGE});
-export const updateNewMessageTextCreator = (text) =>
-    ({type: UPDATE_NEW_MESSAGE_TEXT, body: text});
 
 
 export default store;
