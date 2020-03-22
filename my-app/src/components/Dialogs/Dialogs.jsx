@@ -14,7 +14,7 @@ const Dialogs = (props) => {
     let messageElement = state.messages.map(m => <Message message={m.message}/>);
 
     let onSendMessage = () => {
-        props.sendMesage();
+        props.sendMessage();
     };
 
     let onMessageChange = (event) => {
