@@ -10,6 +10,7 @@ return{
 };
 
 let mapDispatchToProps = (dispatch) =>{
+
 return{
     follow: (userId) => {
         dispatch(followAC(userId))
