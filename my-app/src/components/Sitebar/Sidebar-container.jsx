@@ -8,6 +8,6 @@ const mapStateToProps = (state) => {
         friendsArray: state.sidebar.friendsArray,
     }
 };
-const SidebarContainer = connect(mapStateToProps)(Sidebar);
+const SidebarContainer = connect (mapStateToProps) (Sidebar);
 
 export default SidebarContainer;
