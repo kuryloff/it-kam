@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from './ProfileInfo.module.css'
+import userPhoto from "../../../assets/images/user.png";
 
 
 const ProfileInfo = (props) => {
@@ -11,7 +12,9 @@ const ProfileInfo = (props) => {
                      alt="header logo"/>
             </div>
             <div className={classes.descriptionBlock}>
-                <img className={classes.logo} src={props.profile.photos.large}
+                <img className={classes.logo} src={
+                    props.profile.photos.large !=null ? props.profile.photos.large: userPhoto
+                }
                      alt=""/>
             </div>
             <h3>{props.profile.fullName}</h3>
