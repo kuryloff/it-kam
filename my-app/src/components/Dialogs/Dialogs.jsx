@@ -1,12 +1,8 @@
 import React from "react";
 import classes from './Dialogs.module.css'
-import {NavLink} from "react-router-dom";
+import {NavLink, Redirect} from "react-router-dom";
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
-import {
-    sendMessageCreator,
-    updateNewMessageTextCreator,
-} from "../../redux/dialogs-reducer";
 
 const Dialogs = (props) => {
     let state = props.dialogsPage;
@@ -20,7 +16,6 @@ const Dialogs = (props) => {
     let onMessageChange = (event) => {
         let text = event.target.value;
         props.updateNewMessageText(text)
-
     };
 
     return (
