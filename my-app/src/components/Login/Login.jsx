@@ -1,6 +1,6 @@
 import React from "react";
-import {Field, reduxForm} from "redux-form";
-import {Input} from "../common/FormsControls/FormsControls";
+import {reduxForm} from "redux-form";
+import {createField, Input} from "../common/FormsControls/FormsControls";
 import {required} from "../../Utils/Validators/validators";
 import {connect} from "react-redux";
 import {login} from "../../redux/auth-reducer";
@@ -11,28 +11,9 @@ import styles from "../common/FormsControls/FormsControls.module.css"
 const LoginForm = (props) => {
     return (
         <form onSubmit={props.handleSubmit}>
-            <div>
-                <Field type="text"
-                       placeholder={'Email'}
-                       name={"email"}
-                       component={Input}
-                       validate={[required]}
-                />
-            </div>
-            <div>
-                <Field placeholder={'Password'}
-                       name={"password"}
-                       component={Input}
-                       validate={[required]}
-                       type={"password"}
-                />
-            </div>
-            <div>
-                <Field type="checkbox"
-                       name={"rememberMe"}
-                       component={Input}
-                /> remember me
-            </div>
+            {createField("Email", "email", [required], Input)}
+            {createField("Password", "password", [required], Input, {type: "password"})}
+            {createField(null, "rememberMe", null, Input, {type: "checkbox"}, "remember me")}
             {props.error && <div className={styles.formSummaryError}>
                 {props.error}
             </div>}
@@ -54,9 +35,10 @@ const Login = (props) => {
         return <Redirect to={"/profile"}/>
     }
 
-
     return <div>
         <h1>Login</h1>
+        {/*<span>For testing use Email: free@samuraijs.com</span><br/>*/}
+        {/*<span>For testing use Password: free</span>*/}
         <LoginReduxForm onSubmit={onSubmit}/>
     </div>
 };

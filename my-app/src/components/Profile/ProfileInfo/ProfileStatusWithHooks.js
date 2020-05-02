@@ -12,6 +12,11 @@ export const ProfileStatusWithHooks = (props) => {
         setEditMode(true);
     };
 
+const keyPressed = (event)=>{
+    if (event.key === "Enter") {
+        deactivateEditMode();
+    }
+};
     const deactivateEditMode = () => {
         setEditMode(false);
         props.updateStatus(status);
@@ -32,6 +37,7 @@ export const ProfileStatusWithHooks = (props) => {
                 <input
                     onChange={onStatusChange}
                     onBlur={deactivateEditMode}
+                    onKeyPress={keyPressed}
                     autoFocus={true}
                     value={status}
                 />
