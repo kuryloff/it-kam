@@ -4,16 +4,16 @@ import Navbar from "./components/Navbar/Nav";
 import News from './components/News/News'
 import Music from './components/Music/Music'
 import Settings from './components/Settings/Settings'
-import {Route} from "react-router-dom";
+import {BrowserRouter, Route} from "react-router-dom";
 import DialogsContainer from "./components/Dialogs/Dialogs-container";
 import UsersContainer from "./components/Users/Users-container";
 import ProfileContainer from "./components/Profile/ProfileContainer";
 import HeaderContainer from "./components/Header/HeaderContainer";
 import LoginPage from "./components/Login/Login";
-import {connect} from "react-redux";
+import {connect, Provider} from "react-redux";
 import {initializeApp} from "./redux/app-reducer";
 import Preloader from "./components/common/preloader/Preloader";
-
+import store from "./redux/redux-store";
 
 const App = (props) => {
     useEffect(() => {
@@ -77,6 +77,15 @@ const mapStateToProps = (state) => ({
     initialized: state.app.initialized
 });
 
-export default connect(mapStateToProps, {initializeApp})(App);
+const AppContainer = connect(mapStateToProps, {initializeApp})(App);
+const GeneralAPP = (props) => {
+    return (
+        <BrowserRouter>
+        <Provider store={store}>
+            <AppContainer/>
+        </Provider>
+    </BrowserRouter>
+    )
+};
 
-
+export default GeneralAPP;

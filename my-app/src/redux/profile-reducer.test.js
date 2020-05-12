@@ -12,7 +12,7 @@ let state = {
 };
 
 it('length of posts should be incremented', () => {
-    // 1. test data
+    // 1. __test__ data
     let action = addPostActionCreator('kuryk');
 //2. action
     let newState = profileReducer(state, action);
@@ -22,7 +22,7 @@ it('length of posts should be incremented', () => {
 });
 
 it('message of new posts should be correct', () => {
-    // 1. test data
+    // 1. __test__ data
     let action = addPostActionCreator('kuryk');
 //2. action
     let newState = profileReducer(state, action);
@@ -31,7 +31,7 @@ it('message of new posts should be correct', () => {
 });
 
 it('after deleting length of new posts should be decrement', () => {
-    // 1. test data
+    // 1. __test__ data
     let action = deletePost(1);
 //2. action
     let newState = profileReducer(state, action);
