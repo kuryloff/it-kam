@@ -70,4 +70,4 @@ export default compose(
         followSuccess, unfollowSuccess, setCurrentPage,
         toggleFollowingProgress,
         requestUsers, follow, unfollow
-    }))(UsersContainer)
+    }))(AuthRedirectComponent)
