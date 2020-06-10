@@ -1,7 +1,7 @@
 import React, {Suspense, useEffect} from 'react';
 import './App.css';
 import Navbar from "./components/Navbar/Nav";
-import {BrowserRouter, Route} from "react-router-dom";
+import {BrowserRouter, HashRouter, Route} from "react-router-dom";
 import HeaderContainer from "./components/Header/HeaderContainer";
 // import LoginPage from "./components/Login/Login";
 import {connect, Provider} from "react-redux";
@@ -93,11 +93,11 @@ const mapStateToProps = (state) => ({
 const AppContainer = connect(mapStateToProps, {initializeApp})(App);
 const GeneralAPP = (props) => {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Provider store={store}>
                 <AppContainer/>
             </Provider>
-        </BrowserRouter>
+        </HashRouter>
     )
 };
 
