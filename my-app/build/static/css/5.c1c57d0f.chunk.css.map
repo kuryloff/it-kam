@@ -1,0 +1,1 @@
+{"version":3,"sources":["Paginator.module.css","Users.module.css"],"names":[],"mappings":"AAAA,+BACI,eACJ,CACA,4BACI,WACJ,CCLA,wBACI,UAAW,CACX,iBACJ","file":"5.c1c57d0f.chunk.css","sourcesContent":[".selectedPage{\r\n    font-weight: bold;\r\n}\r\n.paginator{\r\n    margin: 10px;\r\n}",".userPhoto{\r\n    width: 50px;\r\n    border-radius: 50%;\r\n}\r\n"]}
