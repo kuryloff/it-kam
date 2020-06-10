@@ -3,8 +3,8 @@
     "static/js/0.b9fd9a13.chunk.js": "/it-kam/static/js/0.b9fd9a13.chunk.js",
     "static/js/0.b9fd9a13.chunk.js.map": "/it-kam/static/js/0.b9fd9a13.chunk.js.map",
     "main.css": "/it-kam/static/css/main.af9413b5.chunk.css",
-    "main.js": "/it-kam/static/js/main.5e10403b.chunk.js",
-    "main.js.map": "/it-kam/static/js/main.5e10403b.chunk.js.map",
+    "main.js": "/it-kam/static/js/main.dc60059d.chunk.js",
+    "main.js.map": "/it-kam/static/js/main.dc60059d.chunk.js.map",
     "runtime-main.js": "/it-kam/static/js/runtime-main.7ee073cf.js",
     "runtime-main.js.map": "/it-kam/static/js/runtime-main.7ee073cf.js.map",
     "static/js/3.157049de.chunk.js": "/it-kam/static/js/3.157049de.chunk.js",
@@ -28,7 +28,7 @@
     "static/js/10.5cfa42ab.chunk.js": "/it-kam/static/js/10.5cfa42ab.chunk.js",
     "static/js/10.5cfa42ab.chunk.js.map": "/it-kam/static/js/10.5cfa42ab.chunk.js.map",
     "index.html": "/it-kam/index.html",
-    "precache-manifest.b2a433658d3dd25269e10a3630129b06.js": "/it-kam/precache-manifest.b2a433658d3dd25269e10a3630129b06.js",
+    "precache-manifest.b756e40370ae887ce8ff8c8e4ea23b5c.js": "/it-kam/precache-manifest.b756e40370ae887ce8ff8c8e4ea23b5c.js",
     "service-worker.js": "/it-kam/service-worker.js",
     "static/css/4.276bb6cc.chunk.css.map": "/it-kam/static/css/4.276bb6cc.chunk.css.map",
     "static/css/5.c1c57d0f.chunk.css.map": "/it-kam/static/css/5.c1c57d0f.chunk.css.map",
@@ -42,6 +42,6 @@
     "static/js/runtime-main.7ee073cf.js",
     "static/js/3.157049de.chunk.js",
     "static/css/main.af9413b5.chunk.css",
-    "static/js/main.5e10403b.chunk.js"
+    "static/js/main.dc60059d.chunk.js"
   ]
 }
