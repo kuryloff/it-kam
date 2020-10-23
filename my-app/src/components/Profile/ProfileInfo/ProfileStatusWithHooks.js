@@ -29,7 +29,7 @@ const keyPressed = (event)=>{
         <div>
             {!editMode &&
             <div>
-                <span onDoubleClick={activateEditMode}>{props.status || 'no current status'}</span>
+                <b>Status:</b><span onDoubleClick={activateEditMode}>{props.status || 'no current status'}</span>
             </div>
             }
             {editMode &&

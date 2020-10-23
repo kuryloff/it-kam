@@ -4,7 +4,7 @@ import FriendItem from './FriendItem/FriendItem';
 
 
 const Sidebar = (props) => {
-let friend = props.friendsArray.map(f => <FriendItem name={f.name} id={f.id} img={f.img}/>);
+let friend = props.friendsArray.map(f => <FriendItem key={f.id} name={f.name} id={f.id} img={f.img}/>);
 
     return (
         <div className={classes.content}>

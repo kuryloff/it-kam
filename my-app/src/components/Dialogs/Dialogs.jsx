@@ -1,6 +1,5 @@
 import React from "react";
 import classes from './Dialogs.module.css'
-import {NavLink, Redirect} from "react-router-dom";
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
 import {Field, reduxForm} from "redux-form";
@@ -16,7 +15,6 @@ const AddMessageForm = (props) => {
                    component={Textarea}
                    name="newMessageBody"
                    validate={[required, maxLength50]}
-
             />
         </div>
         <div>
@@ -29,8 +27,10 @@ const AddMessageFormRedux = reduxForm({form: 'dialogAddMessageForm'})(AddMessage
 
 const Dialogs = (props) => {
     let state = props.dialogsPage;
+
     let dialogElement = state.dialogs.map(d => <DialogItem name={d.name} id={d.id} img={d.img}/>);
     let messageElement = state.messages.map(m => <Message message={m.message}/>);
+    const newMessageBody = state.newMessageBody
 
     let addNewMessage = (values)=>{
         props.sendMessage(values.newMessageBody);

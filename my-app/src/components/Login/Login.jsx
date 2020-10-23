@@ -8,14 +8,19 @@ import {Redirect} from "react-router-dom";
 import styles from "../common/FormsControls/FormsControls.module.css"
 
 
-const LoginForm = (props) => {
+const LoginForm = ({handleSubmit, error, captchaUrl}) => {
     return (
-        <form onSubmit={props.handleSubmit}>
+        <form onSubmit={handleSubmit}>
             {createField("Email", "email", [required], Input)}
             {createField("Password", "password", [required], Input, {type: "password"})}
             {createField(null, "rememberMe", null, Input, {type: "checkbox"}, "remember me")}
-            {props.error && <div className={styles.formSummaryError}>
-                {props.error}
+
+            {captchaUrl && <img src={captchaUrl} alt=""/>}
+            {captchaUrl && createField('Symbols from image', "captcha", [required], Input)}
+
+
+            {error && <div className={styles.formSummaryError}>
+                {error}
             </div>}
             <div>
                 <button>Login</button>
@@ -26,9 +31,9 @@ const LoginForm = (props) => {
 
 const LoginReduxForm = reduxForm({form: 'login'})(LoginForm);
 
-const Login = (props) => {
+const Login = ({captchaUrl, ...props}) => {
     const onSubmit = (formData) => {
-        props.login(formData.email, formData.password, formData.rememberMe)
+        props.login(formData.email, formData.password, formData.rememberMe, formData.captcha)
     };
 
     if (props.isAuth) {
@@ -37,15 +42,14 @@ const Login = (props) => {
 
     return <div>
         <h1>Login</h1>
-        {/*<span>For testing use Email: free@samuraijs.com</span><br/>*/}
-        {/*<span>For testing use Password: free</span>*/}
-        <LoginReduxForm onSubmit={onSubmit}/>
+        <LoginReduxForm onSubmit={onSubmit} captchaUrl={captchaUrl}/>
     </div>
 };
 
 const mapStateToProps = (state) => {
     return ({
         isAuth: state.auth.isAuth,
+        captchaUrl: state.auth.captchaUrl
     })
 };
 

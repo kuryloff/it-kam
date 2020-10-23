@@ -12,5 +12,10 @@
 }
 
 .descriptionBlock{
-    padding: 10px;
+    padding: 20px;
+}
+
+.contact {
+    padding-left: 10px;
+    color: red;
 }

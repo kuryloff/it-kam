@@ -2,7 +2,7 @@ import {getAuthUserData} from "./auth-reducer";
 
 const SET_INITIALIZED_SUCCESS = 'social-network/app/SET_INITIALIZED_SUCCESS';
 
-let initialState = {
+const initialState = {
     initialized: false,
 };
 
@@ -23,14 +23,7 @@ export const setInitializedSuccess = () => ({type: SET_INITIALIZED_SUCCESS});
 export const initializeApp = () => async (dispatch) => {
     let promise = await dispatch(getAuthUserData());
     await Promise.all([promise]);
-        dispatch(setInitializedSuccess())
+    dispatch(setInitializedSuccess())
 };
-
-// export const initializeApp = () => (dispatch) => {
-//     let promise = dispatch(getAuthUserData());
-//     Promise.all([promise])
-//         .then(()=> {dispatch(setInitializedSuccess())
-//         })
-// };
 
 export default appReducer;
